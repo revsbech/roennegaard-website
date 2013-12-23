@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="da">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--
+
+-->
+
+<title>Læge Lillian Rønnegaard Clausen</title>
+
+<link rel="stylesheet" type="text/css" href="css/960.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/screen.css" media="all" />
+<script type="text/javascript"
+    src="http://maps.google.com/maps/api/js?sensor=false">
+</script>
+
+<!--
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAADxr3YTgSkiQgv9RfGhlCcxRcJnZSgTKrlKnWb6YtJHIEbt17jBQJ8VHSP6ay518VZnjzxZsYvQRepA" type="text/javascript"></script>
+-->
+</head>
+<body>
+<div class="site-containter">
+	<div class="container_12">
+		<div class="grid_12 content">
+			<h1>Her finder du klinikken</h1>
+			    <div id="map" style="width: 940px; height: 600px"></div>
+			    <script type="text/javascript">
+			    //<![CDATA[
+
+
+			    var myLatlng = new google.maps.LatLng(55.935485566823075,12.503854930400848);
+				var myOptions = {
+					zoom: 15,
+					center: myLatlng,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				};
+				var map = new google.maps.Map(document.getElementById("map"),myOptions);
+
+				var marker = new google.maps.Marker({
+					position: myLatlng,
+					map: map,
+					title:"Vores nye lægepraksis "
+				});
+				var contentString = '<div id="content">'+
+				    '<div id="siteNotice">'+
+				    '</div>'+
+				    '<h1 id="firstHeading" class="firstHeading">Ny praksis</h1>'+
+				    '<div id="bodyContent">'+
+				    '<p>Her ligger den nye lægepraksis</p>'+
+				    '<img src="http://www.doktorrønnegaard.dk/images/sted2.jpg" />'+
+				    '</div>'+
+				    '</div>';
+
+			  		var infowindow = new google.maps.InfoWindow({
+    					content: contentString
+					});
+					google.maps.event.addListener(marker, 'click', function() {
+  						infowindow.open(map,marker);
+					});
+
+			    //]]>
+			    </script>
+				<a href="/">< Tilbage</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

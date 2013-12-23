@@ -1,0 +1,22 @@
+body{
+	font-family: Arial;
+}
+
+h1 {
+	font-size: 28px;
+	/*color: #cf2423;*/
+}
+.red {
+	color: #cf2423;
+}
+h2 {
+	font-size: 16px;
+
+}
+.center {
+	text-align: center;
+
+}
+.content {
+	font-size: 14px;
+}
